@@ -11,6 +11,8 @@
 		BA47B5812BDE90D600363D67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47B5802BDE90D600363D67 /* ContentView.swift */; };
 		BA47B5832BDE90D700363D67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA47B5822BDE90D700363D67 /* Assets.xcassets */; };
 		BA47B5862BDE90D700363D67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA47B5852BDE90D700363D67 /* Preview Assets.xcassets */; };
+		BA47B58D2BDE921300363D67 /* ChristmasTreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47B58C2BDE921300363D67 /* ChristmasTreeView.swift */; };
+		BA47B58F2BDE969200363D67 /* PivotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47B58E2BDE969200363D67 /* PivotView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		BA47B5802BDE90D600363D67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BA47B5822BDE90D700363D67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA47B5852BDE90D700363D67 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BA47B58C2BDE921300363D67 /* ChristmasTreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChristmasTreeView.swift; sourceTree = "<group>"; };
+		BA47B58E2BDE969200363D67 /* PivotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PivotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				BA47B57E2BDE90D600363D67 /* AnimationAppSwiftUIApp.swift */,
 				BA47B5802BDE90D600363D67 /* ContentView.swift */,
+				BA47B58C2BDE921300363D67 /* ChristmasTreeView.swift */,
+				BA47B58E2BDE969200363D67 /* PivotView.swift */,
 				BA47B5822BDE90D700363D67 /* Assets.xcassets */,
 				BA47B5842BDE90D700363D67 /* Preview Content */,
 			);
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA47B5812BDE90D600363D67 /* ContentView.swift in Sources */,
+				BA47B58D2BDE921300363D67 /* ChristmasTreeView.swift in Sources */,
 				BA47B57F2BDE90D600363D67 /* AnimationAppSwiftUIApp.swift in Sources */,
+				BA47B58F2BDE969200363D67 /* PivotView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
