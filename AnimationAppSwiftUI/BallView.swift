@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct BallView: View {
+    
+    let color: Color
+    let opacity: Double
+    
     var body: some View {
         GeometryReader { geometry in
             let width = geometry.size.width
@@ -59,6 +63,6 @@ struct BallView: View {
 }
 
 #Preview {
-    BallView()
+    BallView(color: .red, opacity: 1)
         .frame(width: 200, height: 200)
 }
