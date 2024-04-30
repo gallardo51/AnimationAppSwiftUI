@@ -9,7 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("")
+        VStack {
+            StarView()
+                .frame(width: 150,height: 150)
+            ChristmasTreeView()
+                .frame(width: 300, height: 300)
+        }
     }
 }
 
