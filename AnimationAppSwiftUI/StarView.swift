@@ -18,17 +18,17 @@ struct StarView: View {
             let middle = size / 2
             
             Path { path in
-                path.move(to: CGPoint(x: 150, y: 20))
-                path.addLine(to: CGPoint(x: 160, y: 40))
-                path.addLine(to: CGPoint(x: 180, y: 45))
-                path.addLine(to: CGPoint(x: 165, y: 55))
-                path.addLine(to: CGPoint(x: 170, y: 80))
-                path.addLine(to: CGPoint(x: 150, y: 65))
-                path.addLine(to: CGPoint(x: 130, y: 80))
-                path.addLine(to: CGPoint(x: 135, y: 55))
-                path.addLine(to: CGPoint(x: 120, y: 45))
-                path.addLine(to: CGPoint(x: 140, y: 40))
-                path.addLine(to: CGPoint(x: 150, y: 20))
+                path.move(to: CGPoint(x: farLine - nearLine - 10, y: nearLine))
+                path.addLine(to: CGPoint(x: farLine - nearLine, y: nearLine * 2))
+                path.addLine(to: CGPoint(x: farLine, y: nearLine * 2 + 5))
+                path.addLine(to: CGPoint(x: farLine - nearLine + 5, y: middle / 2 + 5))
+                path.addLine(to: CGPoint(x: farLine - 10, y: middle - nearLine))
+                path.addLine(to: CGPoint(x: farLine - nearLine - 10, y: nearLine * 3 + 5))
+                path.addLine(to: CGPoint(x: middle + nearLine + 10, y: middle - nearLine))
+                path.addLine(to: CGPoint(x: middle + nearLine + 15, y: nearLine * 3 - 5))
+                path.addLine(to: CGPoint(x: middle + nearLine, y: nearLine * 2 + 5))
+                path.addLine(to: CGPoint(x: middle + nearLine * 2, y: nearLine * 2))
+                path.addLine(to: CGPoint(x: farLine - nearLine - 10, y: nearLine))
             }
             .fill(Color.red)
             .stroke(
@@ -43,6 +43,6 @@ struct StarView: View {
 
 #Preview {
     StarView()
-        .frame(width: 300, height: 300)
+        .frame(width: 200, height: 200)
 }
 

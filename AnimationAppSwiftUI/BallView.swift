@@ -18,11 +18,11 @@ struct BallView: View {
             let middle = size / 2
             
             Path { path in
-                path.move(to: CGPoint(x: 160, y: 20))
-                path.addLine(to: CGPoint(x: 160, y: 40))
-                path.addLine(to: CGPoint(x: 140, y: 40))
-                path.addLine(to: CGPoint(x: 140, y: 20))
-                path.addLine(to: CGPoint(x: 160, y: 20))
+                path.move(to: CGPoint(x: farLine - nearLine, y: nearLine))
+                path.addLine(to: CGPoint(x: farLine - nearLine, y: nearLine * 2))
+                path.addLine(to: CGPoint(x: middle + nearLine * 2, y: nearLine * 2))
+                path.addLine(to: CGPoint(x: middle + nearLine * 2, y: nearLine))
+                path.addLine(to: CGPoint(x: farLine - nearLine, y: nearLine))
             }
             .fill(Color.yellow)
             .stroke(
@@ -33,10 +33,19 @@ struct BallView: View {
             )
             
             Path { path in
-                path.move(to: CGPoint(x: 160, y: 40))
-                path.addQuadCurve(to: CGPoint(x: 160, y: 80), control: CGPoint(x: 200, y: 60))
-                path.addQuadCurve(to: CGPoint(x: 140, y: 80), control: CGPoint(x: 150, y: 90))
-                path.addQuadCurve(to: CGPoint(x: 140, y: 40), control: CGPoint(x: 100, y: 60))
+                path.move(to: CGPoint(x: farLine - nearLine, y: nearLine * 2))
+                path.addQuadCurve(
+                    to: CGPoint(x: farLine - nearLine, y: middle - nearLine),
+                    control: CGPoint(x: farLine + nearLine, y: nearLine * 3)
+                )
+                path.addQuadCurve(
+                    to: CGPoint(x: farLine - nearLine * 2, y: middle - nearLine),
+                    control: CGPoint(x: farLine - nearLine - 10, y: middle - 10)
+                )
+                path.addQuadCurve(
+                    to: CGPoint(x: middle + nearLine * 2, y: nearLine * 2),
+                    control: CGPoint(x: middle, y: nearLine * 3)
+                )
             }
             .fill(Color.red)
             .stroke(
@@ -51,5 +60,5 @@ struct BallView: View {
 
 #Preview {
     BallView()
-        .frame(width: 300, height: 300)
+        .frame(width: 200, height: 200)
 }

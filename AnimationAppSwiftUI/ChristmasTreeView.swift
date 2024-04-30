@@ -123,5 +123,5 @@ struct ChristmasTreeView: View {
 
 #Preview {
     ChristmasTreeView()
-        .frame(width: 300, height: 300)
+        .frame(width: 250, height: 250)
 }
