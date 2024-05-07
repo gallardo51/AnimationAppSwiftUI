@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var showSnowFall = false
     
     var body: some View {
-        VStack{
+        VStack {
             Button(action: {
                 withAnimation {
                     showSnowFall.toggle()
@@ -20,9 +20,6 @@ struct ContentView: View {
             }) {
                 ZStack() {
                     if showSnowFall {
-                        Text("Happy New Year!!!")
-                            .font(.largeTitle)
-                            .foregroundStyle(Color.red)
                         Rectangle()
                             .fill(
                                 LinearGradient(
@@ -34,12 +31,20 @@ struct ContentView: View {
                             .frame(width: 400, height: 400)
                         ChristmasTreeView()
                             .frame(width: 250, height: 250)
-                            .offset(CGSize(width: -15.0, height: 0.0))
+                            .offset(CGSize(width: -15.0, height: 0.0)
+                            )
+                        Text("Happy New Year!!!")
+                            .font(.largeTitle)
+                            .foregroundStyle(Color.yellow)
+                            .offset(CGSize(width: 0, height: -180)
+                            )
+                            .transition(.showLabelTransition)
                         Image(systemName: "star.fill")
                             .resizable()
                             .frame(width: 30, height: 30)
                             .foregroundStyle(Color.red)
-                            .offset(CGSize(width: 10, height: -110))
+                            .offset(CGSize(width: 10, height: -110)
+                            )
                         Image(systemName: "gift.fill")
                             .resizable()
                             .frame(width: 30, height: 30)
@@ -55,12 +60,11 @@ struct ContentView: View {
                             .frame(width: 30, height: 30)
                             .offset(CGSize(width: 35, height: 135))
                             .foregroundStyle(Color(.purple))
-                        Text("")
                         Image(systemName: "snowflake")
                             .resizable()
                             .frame(width: 20, height: 20)
                             .foregroundStyle(Color.white)
-                            .offset(CGSize(width: 100, height: -170)
+                            .offset(CGSize(width: 100, height: -150)
                             )
                             .transition(.transition)
                         Image(systemName: "snowflake")
@@ -102,7 +106,7 @@ struct ContentView: View {
                             .resizable()
                             .frame(width: 20, height: 20)
                             .foregroundStyle(Color.white)
-                            .offset(CGSize(width: -120, height: -180)
+                            .offset(CGSize(width: -120, height: -140)
                             )
                             .transition(.transition)
                         Image(systemName: "snowflake")
@@ -112,8 +116,57 @@ struct ContentView: View {
                             .offset(CGSize(width: -150, height: -70)
                             )
                             .transition(.transition)
+                        Image(systemName: "snowflake")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .foregroundStyle(Color.white)
+                            .offset(CGSize(width: -150, height: -70)
+                            )
+                            .transition(.transition)
+                        Image(systemName: "snowflake")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .foregroundStyle(Color.white)
+                            .offset(CGSize(width: -40, height: -50)
+                            )
+                            .transition(.transition)
+                        Image(systemName: "snowflake")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .foregroundStyle(Color.white)
+                            .offset(CGSize(width: -150, height: 70)
+                            )
+                            .transition(.transition)
+                        Image(systemName: "snowflake")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .foregroundStyle(Color.white)
+                            .offset(CGSize(width: -100, height: 150)
+                            )
+                            .transition(.transition)
+                        Image(systemName: "snowflake")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .foregroundStyle(Color.white)
+                            .offset(CGSize(width: 120, height: 0)
+                            )
+                            .transition(.transition)
+                        Image(systemName: "snowflake")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .foregroundStyle(Color.white)
+                            .offset(CGSize(width: 100, height: 50)
+                            )
+                            .transition(.transition)
+                        Image(systemName: "snowflake")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .foregroundStyle(Color.white)
+                            .offset(CGSize(width: 150, height: 100)
+                            )
+                            .transition(.transition)
                     } else {
-                        Text("Let's GO!")
+                        Text("🎄Show Christmas Tree🎅")
                             .font(.largeTitle)
                             .foregroundStyle(Color.red)
                             .transition(.scale)
@@ -133,6 +186,17 @@ extension AnyTransition {
         return .asymmetric(insertion: insertion, removal: removal)
     }
 }
+
+extension AnyTransition {
+    static var showLabelTransition: AnyTransition {
+        let insertion = AnyTransition.move(edge: .bottom)
+            .combined(with: .scale)
+        let removal = AnyTransition.move(edge: .bottom)
+            .combined(with: .opacity)
+        return .asymmetric(insertion: insertion, removal: removal)
+    }
+}
+
 
 #Preview {
     ContentView()

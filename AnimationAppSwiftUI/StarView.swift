@@ -43,6 +43,6 @@ struct StarView: View {
 
 #Preview {
     StarView()
-        .frame(width: 100, height: 100)
+        .frame(width: 150, height: 150)
 }
 
